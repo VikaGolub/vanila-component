@@ -1,0 +1,69 @@
+:root {
+  --color: black;
+  --bg-color: white;
+  --primary-color: blue;
+  --secondary-color: orange;
+  --danger-color: red;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  gap: 10px;
+  place-content: center;
+  place-items: center;
+}
+
+button {
+  border: 1px solid var(--color);
+  border-radius: 99px;
+  color: var(--bg-color);
+}
+
+.s {
+  padding: 3px 6px;
+}
+
+.m {
+  padding: 5px 10px;
+}
+
+.l {
+  padding: 7px 14px;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.danger {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.transparent {
+  background: none;
+}
+
+.primary:is(.transparent, .borderless) {
+  color: var(--primary-color);
+}
+
+.secondary:is(.transparent, .borderless) {
+  color: var(--secondary-color);
+}
+
+.danger:is(.transparent, .borderless) {
+  color: var(--danger-color);
+}
+
+.borderless {
+  background: none;
+  border: none;
+}
